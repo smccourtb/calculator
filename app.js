@@ -13,3 +13,11 @@ const multiply = function(a, b) {
 const divide = function(a, b) {
     return a / b;
 };
+
+
+const operate = function(a, b, operator){
+    return operator(a, b)
+}
+
+
+console.log(operate(10,5, divide))
