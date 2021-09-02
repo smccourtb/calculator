@@ -67,9 +67,9 @@ equals.addEventListener("click", () => {
 
 function cleared() {
     display.textContent = null;
-    displayValue = ""
-    firstNumber = 0
-    secondNumber = 0
-    interimNum1 = 0
-    // will have to clear variables in this at some point
+    displayValue = "";
+    firstNumber = 0;
+    secondNumber = 0;
+    interimNum1 = 0;
+    operator = null;
 };
