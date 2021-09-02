@@ -1,6 +1,6 @@
-#numbers {
+#numberContainer {
     display: grid;
-    grid-template-columns: repeat(3, 20px);
+    grid-template-columns: 20px 20px 20px;
 }
 
 
@@ -11,5 +11,3 @@
     height: 40px;
 
 }
-
-;
