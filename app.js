@@ -61,6 +61,7 @@ clear.addEventListener('click', cleared);
 equals.addEventListener("click", () => {
     if(firstNumber && secondNumber && operator) {
         interimNum1 = operate(firstNumber, secondNumber, operator)
+        display.textContent = interimNum1
     };
 })
 
