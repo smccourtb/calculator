@@ -97,33 +97,40 @@ function cleared() {
 };
 
 function checkForOperation(operation) {
-    if(operator === "equals") {
+    if (!firstNumber) {
+        return
+    }
+    if(operation == "equals") {
         
         interimNum1 = operate(firstNumber, secondNumber, operator)
-        display.textContent = interimNum1
+        display.textContent = interimNum1.toFixed(3)
         operator = null
         secondNumber = null
         return
     };
-    if(operator && secondNumber== "0") {
+
+    if(operator && (secondNumber== "0" || !secondNumber)) {
         console.log('its true its true')
         display.textContent = "5318008"
         return alert('5318008')
         // it would be cool to flip the calculator upside down like kids back in the day
     }
 
-    if(firstNumber && secondNumber && operator) {
+    if(firstNumber && secondNumber && operator !== "equals") {
         console.log('yerrp')
         interimNum1 = operate(firstNumber, secondNumber, operator)
         // operator = null;
         firstNumber = interimNum1;
         secondNumber = null;
-        display.textContent = interimNum1
+        display.textContent = interimNum1.toFixed(3)
         // return
     };
 
     if(!operator || operation !==operator) {
         console.log("Storing Operator = ", operation)
         operator = operation
-    };   
+    }
+    else{
+        return
+    };
 };

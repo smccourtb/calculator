@@ -1,18 +1,41 @@
 #numberContainer {
     display: grid;
-    grid-template-columns: 20px 20px 20px 20px;
+    grid-template-columns: auto auto auto auto;
+    height: 100px
 }
 
 
 
 #screen {
     border-style: solid;
-    width: 75px;
-    height: 40px;
+    border-inline-width: 1px;
+    background-color: rgb(170, 253, 159);
+    width: auto;
+    height: 60px;
+    text-align-last: right;
+    font-size: larger;
 }
 
 #calculator {
+    justify-content: center;
+    border-style: solid;
+    width: 250px;
+    height: 100%;
+}
+
+.operator {
+    background-color: rgba(250, 216, 107, 0.671);
+    height: 100%;
+
+}
+
+.number {
+    font-size: large;
+    height: auto;
+}
+
+body {
+    margin-top: 75px;
     display: grid;
-    grid-template-columns: 200px;
     justify-content: center;
 }
