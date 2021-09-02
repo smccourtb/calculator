@@ -54,6 +54,9 @@ for(let i = 0; i < operators.length; i++) {
         display.textContent += operators[i].id;
         displayValue += operators[i].id
         operator = operators[i].name
+        // if operator pressed automatically perform function and 
+        //store it in a variable keep doing this with separate variables 
+        //until equals is hit
     })
 };
 
@@ -61,6 +64,9 @@ clear.addEventListener('click', cleared);
 equals.addEventListener("click", () => {
     if(firstNumber && secondNumber && operator) {
         interimNum1 = operate(firstNumber, secondNumber, operator)
+        firstNumber = interimNum1;
+        secondNumber = 0;
+        operator = null;
         display.textContent = interimNum1
     };
 })
