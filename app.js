@@ -103,7 +103,7 @@ function checkForOperation(operation) {
     if(operation == "equals") {
         
         interimNum1 = operate(firstNumber, secondNumber, operator)
-        display.textContent = interimNum1.toFixed(3)
+        display.textContent = interimNum1
         operator = null
         secondNumber = null
         return
@@ -122,7 +122,7 @@ function checkForOperation(operation) {
         // operator = null;
         firstNumber = interimNum1;
         secondNumber = null;
-        display.textContent = interimNum1.toFixed(3)
+        display.textContent = interimNum1
         // return
     };
 
