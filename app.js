@@ -13,6 +13,13 @@ function divide(a, b) {
     return a / b;
 };
 
+const calculator = (() => {
+    const add = (a,b) => a+b;
+    const sub = (a,b) => a-b;
+    const mul = (a,b) => a*b;
+    const div = (a,b) => a/b;
+    return {add, sub, mul, div};
+})();
 
 function operate(a, b, operator){
     return this[operator](parseInt(a), parseInt(b));
@@ -72,18 +79,6 @@ for(let i = 0; i < operators.length; i++) {
         
     })
 };
-
-
-// equals.addEventListener("click", () => {
-//     if(operator === 'divide' && secondNumber==0) {
-//         display.textContent = "5318008"
-//         return alert('5318008')
-//         // make it return 5318008
-//     }
-//     if(firstNumber && secondNumber && operator) {
-//         checkForOperation()
-//     };
-// })
 
 clear.addEventListener('click', cleared);
 
